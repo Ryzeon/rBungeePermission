@@ -28,7 +28,7 @@ public class PlayerPermissionsInformation {
         task = new BukkitRunnable() {
             @Override
             public void run() {
-                rUtils.getOnlinePlayers().stream().filter(player -> player.hasPermission("rperms.staff")).forEach(player -> {
+                rUtils.getOnlinePlayers().forEach(player -> {
                     rPermsLoader.sendBungeeMessage(rUtils.serializeStaffData(player));
                 });
             }

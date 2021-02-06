@@ -3,6 +3,7 @@ package me.ryzeon.rperms.player;
 import lombok.Getter;
 import lombok.Setter;
 import me.ryzeon.rperms.bungee.rPermsLoader;
+import me.ryzeon.rperms.utils.Cooldown;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,10 +29,13 @@ public class GhoulUser {
 
     private String prefix = "&a";
 
+    private Cooldown streamCooldown = new Cooldown(0);
+    private Cooldown announceCooldown = new Cooldown(0);
+
     public GhoulUser(String name) {
         this.name = name;
         ghoulUsers.add(this);
-        rPermsLoader.logger("&cNew staff data -> " + name);
+        rPermsLoader.logger("&cNew ghoul data -> " + name);
     }
 
     public boolean hasPermission(String permission) {
