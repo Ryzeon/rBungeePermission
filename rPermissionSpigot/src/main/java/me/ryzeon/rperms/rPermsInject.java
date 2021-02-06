@@ -10,12 +10,6 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 
 public class rPermsInject extends JavaPlugin {
-
-    @Override
-    public void onDisable() {
-        rPermsLoader.INSTANCE.onStop();
-    }
-
     @Override
     public void onEnable() {
         rPermsLoader.INSTANCE.onStart(this);

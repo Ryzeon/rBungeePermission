@@ -23,13 +23,7 @@ public enum rPermsLoader {
     @Deprecated
     public void onStart(Plugin plugin) {
         this.plugin = plugin;
-
         load();
-    }
-
-    @Deprecated
-    public void onStop() {
-
     }
 
     public static void logger(String text) {

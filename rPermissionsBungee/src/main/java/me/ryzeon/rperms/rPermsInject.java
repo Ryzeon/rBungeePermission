@@ -15,9 +15,4 @@ public class rPermsInject extends Plugin {
     public void onEnable() {
         rPermsLoader.INSTANCE.onStart(this);
     }
-
-    @Override
-    public void onDisable() {
-        rPermsLoader.INSTANCE.onStop();
-    }
 }
