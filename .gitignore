@@ -112,3 +112,6 @@ buildNumber.properties
 
 # Common working directory
 run/
+libs/spigot.jar
+
+libs/zBungee.jar
